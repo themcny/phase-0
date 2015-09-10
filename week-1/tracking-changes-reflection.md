@@ -12,7 +12,7 @@ Commit messages should begin with a short summary - generally 50 characters or l
 
 What does the HEAD^ argument mean?
 
-
+HEAD^ is the last commit. So if you wanted to reset what was just committed you would use 'git reset --soft HEAD^'.
 
 What are the 3 stages of a git change and how do you move a file from one stage to the other?
 
