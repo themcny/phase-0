@@ -26,7 +26,8 @@ In the command line - git commit -m "The commit message"
 
 What is a pull request and how do you create and merge one?
 
-
+A pull request is a way for a developer to submit their code or contributions to a project. To create a pull request, you go to your fork on GitHub. There will be a drop down menu for you to choose what branch you're working with. Below that drop down menu, there is a gray bar that has a 'Pull Request' button at the right of the page. Now at the top of the page GitHub will show you what branch you are making a pull request on. (If you can't find your repo you need to change your URL so that you can access your own repo instead of messing with the devbootcamp repo.) The 'base fork' should be [your username]/[your repo] and the 'base' should be master. Then on the right (after the three dots) the first dropdown should be your fork (not the master). The second drop down ('compare') will be the branch you pushed. When all of this is correct, you can then comment on what you changed and press 'Create pull Request' (or just press 'Create pull Request').
+Now to merge changes you click on the pull request that you made and click 'Merge pull request'. Confirm the merge and then to clean up your branches you can delete the extra branch made by pressing the 'Delete branch' button on the right.
 
 Why are pull requests preferred when working with teams?
 
