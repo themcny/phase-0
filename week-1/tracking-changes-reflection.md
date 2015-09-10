@@ -16,7 +16,7 @@ HEAD^ is the last commit. So if you wanted to reset what was just committed you 
 
 What are the 3 stages of a git change and how do you move a file from one stage to the other?
 
-
+The file starts out as unmodified. The developer then edits this file. The file then enters the modified stage of a git change. The developer then stages the file ("git add [file name]")and the file enters the staged stage of a git change. At this point the developer commits the file ("git commit -m ["commit message"]") and the file becomes committed.
 
 Write a handy cheatsheet of the commands you need to commit your changes?
 
