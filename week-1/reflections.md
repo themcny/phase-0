@@ -43,3 +43,23 @@ I think being able to master how to navigate the directory is one of the most im
 -help = gives help on a bash 
 
 # 1.4 Forking and Clonging Reflection
+
+To create a new repo, log in to your github account and navigate to the github.com homepage while logged in. About halfway down the page, on the right side, there will be a green button saying "+ New repository". Click on this green button. Now you can name your repo, set it private (or keep it private) and add a license (like the MIT License).
+
+ 
+
+To fork a repo, navigate to the repo you want to fork (e.g. https://github.com/Devbootcamp/phase-0-handbook (Links to an external site.)). Once there, at the upper right hand side of the page (under your profile picture) there should be a grey button that says "fork". Click on that button and it will bring up a pop up that asks where the copy of the repo should be sent. Click on your own profile picture to copy it to your GitHub account. 
+
+ 
+
+To clone a repo, navigate to the repo you want to clone (e.g. github.com/[your username]/[repo you want to clone] because you want your forked version of it, not someone else's version of it). At the righthand side of the page, there will be a series of buttons stacked vertically (beginning with "<> Code", followed by "Pull requests" and so on). Below "Settings", there will be text that either says "HTTPS clone URL" or "SSH clone URL". Copy that address to the clipboard.
+
+Then, open your terminal and navigate to the proper directory (i.e. a new folder created for the repo or the desktop). If you are using HTTPS, then use the HTTPS url that you copied and paste it after the command git clone. You will then be asked for your GitHub username and password. Type those in and press enter. Then, after the computer is done executing your command, type in ls to check and make sure that your folder has made it to the intended directory.
+
+ 
+
+Forking a repo is a quick way to copy an already existing repo. So if you're working on a project, for which a repo already exists, it would make more sense to copy the existing repo than to create a completely new one from scratch. On the other hand, if you're starting a project from scratch it is probably a good idea to create your own repo to work on it. The fork of a repo allows you to change the repo without affecting the original work.
+
+ 
+
+I struggled in learning how to navigate around GitHub. It took me a while to figure out how to go to other user's pages and fork the repos on their pages. Originally, I was trying to fork my own repos which did not work. I've also learned how to better visualize the directory system. At first it was tricky for me to figure out how to get to certain folders and figure out the folder paths, but after some practice creating and moving around directories, I was able to get the hang of it.
