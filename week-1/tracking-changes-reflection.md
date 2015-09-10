@@ -31,4 +31,4 @@ Now to merge changes you click on the pull request that you made and click 'Merg
 
 Why are pull requests preferred when working with teams?
 
-
+Pull requests are preferred because they allow you to tell all the other developers you're working with about the changes that you've pushed to a repo on GitHub. It facillitates collaboration because everyone can see all the changes and additions being made to a repo. 
