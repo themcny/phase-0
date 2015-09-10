@@ -42,7 +42,7 @@ I think being able to master how to navigate the directory is one of the most im
 
 -help = gives help on a bash 
 
-# 1.4 Forking and Clonging Reflection
+# 1.4 Forking and Cloning Reflection
 
 To create a new repo, log in to your github account and navigate to the github.com homepage while logged in. About halfway down the page, on the right side, there will be a green button saying "+ New repository". Click on this green button. Now you can name your repo, set it private (or keep it private) and add a license (like the MIT License).
 
