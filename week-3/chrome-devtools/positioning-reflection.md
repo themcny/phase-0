@@ -28,7 +28,7 @@ By adjusting the `width` and `height`, elements can be resized. The `width` and 
 
 **What are the differences between Absolute, Fixed, Static, and Relative positioning? Which did you find easiest to use? Which was most difficult?**
 
-`Static` is the default positioning and elements with *static positioning* aren't affected by top, bottom, left, and right properties. 
+`Static` is the default positioning and elements with `static` positioning aren't affected by top, bottom, left, and right properties. 
 `Relative` positioning is positioned relative to where it would have been postioned if you didn't edit it's position. Editing the top, bottom, left, and right properties adjutst the element `relative` to where it would have been.
 `Fixed` positioning positions the element relative to the viewport. This means that no matter how much you scroll, the element will stay `fixed` in that pace. Editing the top, bottom, left, and right properties will adjust the position of the element relative to the viewport.
 `Absolute` positioning means that the element is positioned relative to the it's nearest positioned ancestor. In the absence of a positioned ancestor, the element will be positioned relative to the document body and move along the page with scrolling (as though its position is `fixed`). A positioned element is an element with any position property that isn't `static`.
