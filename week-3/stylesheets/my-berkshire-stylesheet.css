@@ -1,0 +1,150 @@
+html {
+    background-color:#ffffff;
+}
+div {
+    color:#000080;
+}
+
+a{
+    color:#800080;
+}
+
+a:visited{
+    color:#FF0000;
+}
+.caps::first-letter{
+    font-size: 200%;
+}
+.caps{
+    float:left;
+    margin:auto;
+}
+
+h3{/*parent*/
+    position:relative;
+    width:100vw;
+    margin-right:auto;
+    margin-left:42.2vw;
+    top:0vh;
+}
+#header-2{/*child of h3*/
+    font-weight:bold;
+    text-align:center;
+    line-height:0px;
+    position:absolute;
+    top:5vh;
+    width:100vw;
+    margin-right:auto;
+    margin-left:0vw;
+    border-bottom:1px solid gray;
+}
+
+/*treat each column as it's own 'child' of the parent 'body'*/
+.column-l{
+    float: left;
+    margin: 0 20px 0 0;
+    position:absolute;
+    top:13vh; left:5vw;
+    width:50vw;
+}
+.column-r{
+    float:right;
+    margin:0 20px 0 0;
+    position:absolute;
+    top:13vh; left:50vw;
+}
+
+/*fix line spacing*/
+ul{
+    line-height: 250%;
+}
+li>span>p{
+    line-height: 1px;
+}
+
+/* Geico Banner*/
+.prefooter{
+    position:absolute;
+    bottom:30vh;
+    text-align:center;
+    line-height:0px;
+    font-size:10px;
+    width:100vw;
+    margin-left:auto;
+    margin-right:auto;
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    padding-bottom: 1vh;
+}
+img{
+    width:75px;
+    height:15px;
+}
+
+/* Comments or Questions */
+footer{
+    position:absolute;
+    bottom:24.5vh;
+    text-align:left;
+    font-size:12px;
+    width:100vw;
+    padding-bottom:1.5vh;
+    border-bottom:1px solid gray;
+}
+.legaldisclaimer{
+    position:absolute;
+    text-align:left;
+    font-size:16px;
+    top: 75vh;left:.5vw;
+}
+
+.copyright{
+    position:absolute;
+    bottom:1px;
+    text-align:left;
+    font-size:8px;
+    top: 78vh;left:.5vw;
+}
+
+/*
+Reflection
+
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+For linking the 'rel' attribute tells what the relationship between the HTML document and the linked document. 
+Type tells the document what kind of document is being linked (text, video, etc.). 
+The 'href' part tells the document where to find the external document. It can either be a relative path to the document
+or it can be an absolute path.
+
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+It was extremely difficult to position all the elements exactly how I wanted. Re-reading some webpages regarding positioning
+(static, relative, fixed, absolute) definitely helped with positioning. Once I understood which elements were the parent elements and
+which were the child elements it helped me position the elements properly. There weren't any tricks besides knowing what I was positioning
+the element relative to (was it relative to the parent element, relative to where it ends up automatically, etc.).
+
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+We used font-size, text-align, color, and background-color to modify the element styles.
+
+
+Did you modify the HTML to include classes or ids? If so, which did you chose and why? If you didn't, how would you know which one to add to your HTML?
+
+We did. We used a combination of ids and classes. We used ids if it was only used to style one element. Classes were used when we wanted to style multiple
+elements throughout the HTML file. 
+
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+The actual site styles the HTML directly. This does nto follow best practices. All the CSS was inline which made it hard
+to parse through the code. They also put everything into tables, which is effective, but creates a code where there is 
+endless nesting. Their code was incredibly hard to read and figure out what part of the site the code was affecting.
+
+Our code followed best practices much better. We had an external CSS sheet and didn't style the HTML directly.
+It was also easier to read ours since someone reading through the code could read through the HTML and know 
+exactly what part we're working on before toggling to the CSS sheet to figure out how we styled that particular part.
+
+
+*/
