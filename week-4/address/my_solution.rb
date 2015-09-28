@@ -5,6 +5,5 @@
 
 # Your Solution Below
 def make_address(street, city, state, zip)
-	puts "You live at " + street + ", in the beautiful city of " + city + ", " + state + "."
-	puts "Your zip is " + zip.to_s "."
+	puts "You live at " + street + ", in the beautiful city of " + city + ", " + state + ". Your zip is " + zip.to_s "."
 end
