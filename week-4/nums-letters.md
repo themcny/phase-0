@@ -1,3 +1,5 @@
+###Release 1: Summarize
+
 **What does `puts` do?**
 
 Puts prints the output (of your code) to the console with a new line. It also returns nil.
@@ -20,6 +22,8 @@ Division with floats is more accurate since floats have decimal points.
 Integer division can be useful if dividing things that can't be split into less than 'one thing'. For example, if there were 100 computers for 16 students, each student would get only 6 computers even though `100 / 16` is more accurately `6.25`. Computers can't be split into fourths, so the answer would be that each student would have 6 computers (and there would be 4 computers left over).
 
 
+###Release 2: Try it!
+
 **Hours in a Year**
 ```ruby
 puts "On a regular year: #{365*24} hours."
@@ -33,6 +37,15 @@ puts "If there are only two leap years in that decade: #{((10*365)+2))*24*60} mi
 puts "If there are three leap years in that decade:#{(10*365+3)*24*60} minutes."
 ```
 
+
+###Release 5: Exercises
+
+[Defining Variables](https://github.com/themcny/phase-0/blob/master/week-4/defining-variables.rb "Defining Variables")
+[Simple String Methods](https://github.com/themcny/phase-0/blob/master/week-4/simple-string.rb "Simple Strings")
+[Local Variables and Basic Math](https://github.com/themcny/phase-0/blob/master/week-4/basic-math.rb "Basic Math")
+
+
+###Release 7: Reflect
 
 **How does Ruby handle addition, subtraction, multiplication, and division of numbers?**
 
