@@ -5,6 +5,6 @@
 
 # Your Solution Below
 
-def do_somethhing(var_one, var_two, var_three)
+def do_something(var_one, var_two, var_three)
 
 end
