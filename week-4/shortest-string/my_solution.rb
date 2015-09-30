@@ -11,6 +11,29 @@
 # If +list_of_words+ is empty the method should return nil
 
 #Your Solution Below
+
+=begin
+  
+IF list_of_words.length is 0 THEN
+  return nil
+ELSIF list_of_words.length is 1 THEN
+  return list_of_words[0]
+ELSE
+  index = 0
+  shortest_string = list_of_words[index]
+  WHILE index < list_of_words.length
+    index = index + 1
+    IF shortest_string.length > list_of_words[index].length THEN
+      shortest_string = list_of_words[index]
+    ELSE
+      return shortest_string
+    ENDIF
+  ENDWHILE
+  return shortest_string
+ENDIF
+  
+=end
+
 def shortest_string(list_of_words)
   if list_of_words.length == 0
     return nil

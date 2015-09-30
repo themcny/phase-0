@@ -11,6 +11,28 @@
 # If +list_of_nums+ is empty the method should return nil
 
 # Your Solution Below
+=begin
+
+IF list_of_numbers is empty THEN
+	return nil
+ELSE IF list_of_numbers.length is 1 THEN
+	return list_of_numbers[0]
+ELSE
+	index_number = 0
+	minimum_number = list_of_numbers[index_number] 
+	WHILE index_number < list_of_numbers.length
+		index_number = index_number + 1
+		IF minimum_number > list_of_numbers[index_number] THEN
+			minimum_number = list_of_numbers[index_number]
+		ELSE
+			minimum_number = minimum_number
+		ENDIF
+	ENDWHILE
+	return minimum_number
+ENDIF
+		
+=end
+
 def smallest_integer(list_of_nums)
 	if list_of_nums.length == 0
 		return nil
