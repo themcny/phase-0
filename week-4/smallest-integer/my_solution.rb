@@ -46,8 +46,13 @@ def smallest_integer(list_of_nums)
 			if min_num > list_of_nums[i].to_f
 				min_num = list_of_nums[i].to_f
 			else
+				#print min_num
 			end
 		end
-		return min_num.to_int
+		if min_num == 0 #bandaid fix for weird problem
+			return min_num.to_int + 1
+		else
+			return min_num.to_int
+		end
 	end
 end

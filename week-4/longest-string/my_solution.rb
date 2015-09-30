@@ -40,6 +40,12 @@ def longest_string(list_of_words)
     	return nil
   	elsif list_of_words.length == 1
     	return list_of_words[0]
+    elsif list_of_words.length == 2
+    	if list_of_words[0].length < list_of_words[1].length
+    		return list_of_words[1]
+    	else
+    		return list_of_words[0]
+    	end
   	else
     	i = 0
     	long_str = list_of_words[i]
@@ -51,6 +57,6 @@ def longest_string(list_of_words)
         		return long_str
       		end
    		end
-    return long_str
+    #return long_str
   	end
 end
