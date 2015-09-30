@@ -40,15 +40,15 @@ def shortest_string(list_of_words)
   elsif list_of_words.length == 1
     return list_of_words[0]
   else
-    i = 0
-    short_str = list_of_words[i]
+    i = 1
+    short_str = list_of_words[0]
     while i < list_of_words.length
-      i += 1
       if short_str.length > list_of_words[i].length
         short_str = list_of_words[i]
       else
-        return short_str
+        #return short_str
       end
+      i += 1
     end
     return short_str
   end

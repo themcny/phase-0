@@ -32,31 +32,30 @@ ELSE
   ENDWHILE
   return longest_string
 ENDIF
-  
+  elsif list_of_words.length == 2
+      if list_of_words[0].length < list_of_words[1].length
+        return list_of_words[1]
+      else
+        return list_of_words[0]
+      end
 =end
 
 def longest_string(list_of_words)
 	if list_of_words.length == 0
     	return nil
-  	elsif list_of_words.length == 1
+  elsif list_of_words.length == 1
     	return list_of_words[0]
-    elsif list_of_words.length == 2
-    	if list_of_words[0].length < list_of_words[1].length
-    		return list_of_words[1]
-    	else
-    		return list_of_words[0]
-    	end
-  	else
-    	i = 0
-    	long_str = list_of_words[i]
+  else
+    	i = 1
+    	long_str = list_of_words[0]
     	while i < list_of_words.length
-      	i += 1
       		if long_str.length < list_of_words[i].length
         		long_str = list_of_words[i]
       		else
-        		return long_str
+        		#return long_str
       		end
+          i += 1
    		end
-    #return long_str
+      return long_str
   	end
 end

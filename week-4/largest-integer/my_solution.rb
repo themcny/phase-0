@@ -40,14 +40,15 @@ def largest_integer(list_of_nums)
 	elsif list_of_nums.length == 1
 		return list_of_nums[0]
 	else
-		i = 0
-		max_num = list_of_nums[i].to_f
+		i = 1
+		max_num = list_of_nums[0].to_f
 		while i < list_of_nums.length
-			i += 1
 			if max_num < list_of_nums[i].to_f
 				max_num = list_of_nums[i].to_f
 			else
+				#print max number
 			end
+			i += 1
 		end
 		return max_num.to_int
 	end
