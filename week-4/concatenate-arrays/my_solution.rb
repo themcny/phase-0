@@ -5,6 +5,24 @@
 
 # Your Solution Below
 
+=begin
+
+concatenated_array = [] #initilizing a new array to store the concatenated array
+index_1 = 0
+WHILE index_1 < array_1.length
+	new_array[index_1] = array_1[index_1]
+	index = index + 1
+ENDWHILE
+
+index_2 = 0
+WHILE index_2 < array_2.length
+	new_array[index_1+index_2] = array_2[index_2]
+	index_2 = index_2 + 1
+ENDWHILE
+return concatenated_array
+
+=end
+
 def array_concat(array_1, array_2)
 	new_array = []
 	i = 0

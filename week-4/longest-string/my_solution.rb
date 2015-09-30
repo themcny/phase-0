@@ -12,11 +12,40 @@
 
 
 # Your Solution Below
+
+=begin
+  
+IF list_of_words.length is 0 THEN
+  return nil
+ELSIF list_of_words.length is 1 THEN
+  return list_of_words[0]
+ELSE
+  index = 0
+  longest_string = list_of_words[index]
+  WHILE index < list_of_words.length
+    index = index + 1
+    IF longest_string.length > list_of_words[index].length THEN
+      longest_string = list_of_words[index]
+    ELSE
+      return longest_string
+    ENDIF
+  ENDWHILE
+  return longest_string
+ENDIF
+  
+=end
+
 def longest_string(list_of_words)
 	if list_of_words.length == 0
     	return nil
   	elsif list_of_words.length == 1
     	return list_of_words[0]
+    elsif list_of_words.length == 2
+    	if list_of_words[0].length < list_of_words[1].length
+    		return list_of_words[1]
+    	else
+    		return list_of_words[0]
+    	end
   	else
     	i = 0
     	long_str = list_of_words[i]
@@ -28,6 +57,6 @@ def longest_string(list_of_words)
         		return long_str
       		end
    		end
-    return long_str
+    #return long_str
   	end
 end
