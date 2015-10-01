@@ -1,0 +1,33 @@
+body{
+    /*border: 1px solid black;*/
+    font-family:Verdana, sans-serif;
+    background-color:#B0E0E6;
+}
+header {
+    background-color:#E6E6FA;
+    width:100vw;
+    padding-top:1vh;
+}
+.column-1 {
+    width: 45vw;
+    float:left;
+    /*border: 1px solid green;*/
+}
+.column-2 {
+    width: 45vw;
+    float:right;
+    /*border:1px solid blue;*/
+}
+a {
+    
+}
+code {
+    background-color:#d0d0d0;
+    color:#CC0066;
+}
+footer {
+    /*position:relative;
+    bottom:0vh;*/
+    clear:both;
+    font-size:8px;
+}
