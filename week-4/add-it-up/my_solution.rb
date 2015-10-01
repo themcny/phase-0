@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Steven Broderick].
 
 # 0. total Pseudocode
 # make sure all pseudocode is commented out!
@@ -15,11 +15,20 @@
 
 
 # 1. total initial solution
-
-
+=begin
+def total(array)
+	total = 0
+	array.each do |i|
+		total += i
+	end
+	return total
+end
+=end
 
 # 3. total refactored solution
-
+def total(array)
+	return array.inject(:+)
+end
 
 
 # 4. sentence_maker pseudocode
@@ -27,10 +36,23 @@
 # Input:
 # Output:
 # Steps to solve the problem.
-
+=begin
+def sentence_maker(array)
+	sentence = ""
+	array[0] = array[0].capitalize
+	array.each do |i|
+		sentence = sentence + i.to_s + " "
+	end
+	return sentence.strip + "."
+end
+=end
 
 # 5. sentence_maker initial solution
 
 
 
 # 6. sentence_maker refactored solution
+def sentence_maker(array)
+	array[0] = array[0].capitalize
+	return array.join(" ") + "."
+end
