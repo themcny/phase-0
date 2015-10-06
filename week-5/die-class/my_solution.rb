@@ -13,19 +13,19 @@
 
 # 1. Initial Solution
 
-class Die
-  def initialize(sides)
-  	@sides = sides
-  end
-
-  def sides
-    return @sides
-  end
-
-  def roll
-    return rand(1..@sides)
-  end
-end
+#class Die
+#  def initialize(sides)
+#  	@sides = sides
+#  end
+#
+#  def sides
+#    return @sides
+#  end
+#
+#  def roll
+#    return rand(1..@sides)
+#  end
+#end
 
 
 
