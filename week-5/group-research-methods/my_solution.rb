@@ -11,8 +11,7 @@ def my_array_finding_method(source, thing_to_find)
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  filter = source.select{|key, value| value == thing_to_find}
-  return filter.keys
+  return source.select{|key, value| value == thing_to_find}.keys
 end
 
 # Identify and describe the Ruby method(s) you implemented.
