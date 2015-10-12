@@ -76,8 +76,8 @@ def grocery(command, list={})
 		qty = gets.chomp 
 		list[item]= qty
 	elsif command.downcase == 'print'
-    	list.each do |item, qty|
-    	 	p "We need #{qty} of #{item}"
+    		list.each do |item, qty|
+    	 		p "We need #{qty} of #{item}"
 		end 	  
 	else 
 		raise ArgumentError.New("You didnt enter a correct command")   
