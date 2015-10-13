@@ -77,7 +77,7 @@ class GuessingGame
     end
   end
 
-  def solved?()
+  def solved?
     if @symbol == :correct
       true
     else
@@ -117,13 +117,19 @@ the variable).
 Explain how to use flow control. Did you have any trouble using it in this challenge? 
 If so, what did you struggle with?
 
-
+Flow control (if/else statements etc.) can be used to modify the input if the input
+meets certain conditions. It allows for single methods to be able to handle many
+different kinds of input without having to manually check and modify that input.
+I didn't have trouble using the basic if/else statements we had to use.
 
 
 Why do you think this code requires you to return symbols? What are the benefits of 
 using symbols?
 
-
+Symbols are immutable which means that their value will never change. It is faster
+to instantize (is that a word?) a symbol than it is to instantize a string. The
+immutable quality of Symbols also allows ruby to use the same object every time that
+specific symbol is referenced which leads to savings in memory. 
 
 
 =end
