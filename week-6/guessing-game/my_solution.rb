@@ -6,12 +6,30 @@
 
 # Pseudocode
 
-# Input:
-# Output:
+# Input: an integer - 'answer'
+# Output: for the 'guess' method return a symbol; for the 'solved?' return a boolean
 # Steps:
+# 1. Initialze the GuessingGame class
+# => set input answer to equal the instance variable '@answer'
+# 2. 'guess' method
+# => IF guess is greater than answer THEN
+# => => RETURN symbol 'high'
+# => ELSIF guess is equal to answer THEN
+# => => RETURN symbol 'correct'
+# => ELSE guess is less than answer THEN
+# => => RETURN symbol 'low'
+# => ENDIF
+# 3. 'solved?' method
+# => IF guess is 'correct' THEN
+# => => RETURN boolean - 'true'
+# => ELSE guess is either high or low
+# => => RETURN boolean - 'false'
+# => ENDIF
 
 
 # Initial Solution
+
+=begin
 
 class GuessingGame
   def initialize(answer)
@@ -38,12 +56,35 @@ class GuessingGame
   end
 end
 
+=end
 
 
 
 # Refactored Solution
 
+class GuessingGame
+  def initialize(answer)
+    @answer = answer
+  end
 
+  def guess(guess)
+    if guess > @answer
+      @symbol = :high
+    elsif guess == @answer
+      @symbol = :correct
+    else
+      @symbol = :low
+    end
+  end
+
+  def solved?
+    if @symbol == :correct
+      true
+    else
+      false
+    end
+  end
+end
 
 
 
@@ -51,24 +92,44 @@ end
 # Reflection
 =begin
 
-How do instance variables and methods represent the characteristics and behaviors (actions) of a real-world object?
+How do instance variables and methods represent the characteristics and behaviors (actions) 
+of a real-world object?
 
-
+For example, let's say that there's a real world class 'Car'. Instance variables that are
+defined in the 'initialize' method are akin to traits that define a car (e.g. 'make', 
+'model', 'year', and 'amt_of_gas'). Methods are like the behaviors of the car (e.g. 'drive',
+'park', and 'get_gas').
 
 
 When should you use instance variables? What do they do for you?
 
+If you want that variable to be defined within the entire scope of the class (over all
+the methods included in this class) using an instance variable is a great idea. They 
+make sure that the information stored in that variable can be accessed from any method
+in the class so that you can manipulate the data according to whatever method you call.
+
+For example, if you defined a variable 'amt_of_gas' for the 'Car' class seen above, you'd
+want to be able to access that 'amt_of_gas' trait in the 'drive' or 'get_gas' method (where
+'drive' subtracts some amount from 'amt_of_gas' and 'get_gas' adds some integer value to
+the variable).
 
 
+Explain how to use flow control. Did you have any trouble using it in this challenge? 
+If so, what did you struggle with?
 
-Explain how to use flow control. Did you have any trouble using it in this challenge? If so, what did you struggle with?
+Flow control (if/else statements etc.) can be used to modify the input if the input
+meets certain conditions. It allows for single methods to be able to handle many
+different kinds of input without having to manually check and modify that input.
+I didn't have trouble using the basic if/else statements we had to use.
 
 
+Why do you think this code requires you to return symbols? What are the benefits of 
+using symbols?
 
-
-Why do you think this code requires you to return symbols? What are the benefits of using symbols?
-
-
+Symbols are immutable which means that their value will never change. It is faster
+to instantize (is that a word?) a symbol than it is to instantize a string. The
+immutable quality of Symbols also allows ruby to use the same object every time that
+specific symbol is referenced which leads to savings in memory. 
 
 
 =end
