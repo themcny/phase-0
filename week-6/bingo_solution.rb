@@ -1,6 +1,6 @@
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
 
-# I spent [#] hours on this challenge.
+# I spent [1] hours on this challenge.
 
 
 # Release 0: Pseudocode
@@ -33,20 +33,32 @@ class BingoBoard
   def call()
     @num_call = rand(1..100)
     @let_call = @letter[rand(0...@letter.length)]
+    # p "#{@let_call} #{@num_call}"
     # return a letter and a number
   end
 
   def check()
-    # replace the number with a string if the number is present
-    # does not replace anything if the number is not present
-    col = @letter.index(@let_call)
-    row = [(0...5)]
-    row.each do |row|
-      if @num_call == @bingo_board[row][col] #check the entire column
-        @bingo_board[row][col] = 'x' #something is wrong
+    (0...5).each do |i|
+      row = @bingo_board[i]
+      there = row.find_index { |x| x == @num_call }
+      if there != nil
+        row[there] = "x"
       end
     end
   end
+  
+    # replace the number with a string if the number is present
+    # does not replace anything if the number is not present
+#    col = @letter.index(@let_call)
+#    row = [(0...5)]
+#    row.each do |i|
+#      if @num_call == @bingo_board[i][col] #check the entire column
+#        @bingo_board[i][col] = 'x' 
+#        p @bingo_board #something is wrong
+#      end
+#    end
+#  end
+
 
 end
 
