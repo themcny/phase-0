@@ -1,8 +1,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge [with: Andrew Blum].
+# I spent [2] hours on this challenge.
 
 # Pseudocode
 
@@ -147,7 +147,26 @@ end
 =begin
 	
 What was the most difficult part of this challenge for you and your pair?
+
+Figuring out what format our data was in was the trickiest part. We were converting between
+strings and integers while also keeping everything in an array so it was sometimes hard to 
+keep track of what format (string or integer) that particular element was in.
+
+
 What new methods did you find to help you when you refactored?
+
+There weren't any new methods, although it was a new way to use map and reduce. I hadn't
+realized that it could be so concise when you didn't use a block.
+
+
 What concepts or learnings were you able to solidify in this challenge?
+
+I got much better and navigating through arrays and modifying only select elements.
+This was great practice at how to selectively iterate over only certain elements of the 
+array and modify only those. It was also good practice at keeping track of what form 
+our data was in. I'd never worked with so many different types of objects all in one
+challenge. 
+
+
 	
 =end
