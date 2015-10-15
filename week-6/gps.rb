@@ -31,21 +31,11 @@ def serving_size_calc(item_to_make, order_quantity)
   end
 end
 
-p serving_size_calc("pie", 7)
-p serving_size_calc("pie", 8)
-p serving_size_calc("cake", 5)
-p serving_size_calc("cake", 7)
-p serving_size_calc("cookie", 1)
-p serving_size_calc("cookie", 10)
-p serving_size_calc("THIS IS AN ERROR", 5)
-=end
-
 
 # Refactored
-=begin
+
 def serving_size_calc(item_to_make, order_quantity)
   library = {"cookie" => 1, "cake" =>  5, "pie" => 7}
-  error_counter = 3
 
   if library.has_key?(item_to_make) 
     
@@ -62,8 +52,6 @@ def serving_size_calc(item_to_make, order_quantity)
   else
     raise ArgumentError.new("#{item_to_make} is not a valid input")
   end
-  
-  
 end
 
 
@@ -76,7 +64,8 @@ p serving_size_calc("cookie", 10)
 p serving_size_calc("THIS IS AN ERROR", 5)
 =end
 
-# New Stuff
+
+# Add New Features
 
 def serving_size_calc()
   library = {"cookie" => 1, "cake" =>  5, "pie" => 7}
@@ -113,26 +102,35 @@ end
 
 serving_size_calc
 
+
+
 #  Reflection
 
 =begin
 
 What did you learn about making code readable by working on this challenge?
 
+It's not necessarily about cutting the amount of lines. Sometimes making it readable
+means not going with one line if statements or using methods with blocks. Sometimes
+the multi-line solutionis more readable.
 
 
 Did you learn any new methods? What did you learn about them?
 
+I didn't really learn any new methods.
 
 
 What did you learn about accessing data in hashes? 
 
-
+I'd never seen the 'values_at' method used and I can see how it would be useful if
+we were trying access multiple keys and place the associated values in an array.
 
 
 What concepts were solidified when working through this challenge?
 
-
+Accessing hash values and using those values was solidfied. I also got practice using the 
+modulus operator in 'real life' (not just for a calculator program). It was good practice
+in flow control too as we wound up using three if/else statements.
 
 
 =end
