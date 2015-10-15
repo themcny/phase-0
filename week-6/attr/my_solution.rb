@@ -48,7 +48,9 @@ greet.hello
 #
 # How are they modifying or returning the value of instance variables?
 #
-# 
+# Modifying happens manually by inputting new values with the method 'change_my age', 
+# 'change_my_name', and 'change_my_occupation'. The methods 'what_is_name','what_is_age', 
+# and 'what_is_occupation' return the value of the instance variables.
 #
 
 
@@ -99,12 +101,17 @@ greet.hello
 
 What is a reader method?
 
-
+Reader method means that the variable can be set within the program but the reader method
+cannot be used to change the variable after it has been set. E.g. with 'attr_reader :age'
+the user cannot use 'instance_of_profile.age = 13' to change the value of 'age'. Another
+extra method is needed to change the age. 
 
 
 What is a writer method?
 
-
+It is a method that allows the user to change the variable even after it has been set. E.g.
+with 'attr_writer: age' the user can use 'instance_or_profile.age = 13' to change the value
+of age.
 
 
 What do the attr methods do for you?
@@ -115,11 +122,15 @@ to return age or name (or whatever trait you're trying to return).
 
 Should you always use an accessor to cover your bases? Why or Why not?
 
+Only if you want that variable to be editable by the user. So if there are variables that
+should always stay constant and shouldn't be edited by the user. E.g. if your profile had
+a trait, 'created_on', that trait shouldn't be editable. That instance of the profile
+can only be created once.
 
 
 What is confusing to you about these methods?
 
-
+Now that I've read Chapter 3 of WGR I'm not confused.
 
 
 =end
