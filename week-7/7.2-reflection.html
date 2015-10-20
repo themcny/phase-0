@@ -1,0 +1,121 @@
+<h2>Release 1: Read and Respond</h2>
+<h3>Introduction</h3>
+<p><strong>Did you learn anything new about JavaScript or programming in general?</strong></p>
+
+<p>I have worked in JavaScript briefly before. There wasn't too much new information, although the history behind it is new for me.</p>
+
+<p><strong>Are there any concepts you feel uncomfortable with?</strong></p>
+
+<p>Not yet.</p>
+
+<br>
+
+<h3>Ch. 1: Values, Types, and Operators</h3>
+
+
+<p><strong>Identify two similarities and two differences between JavaScript and Ruby syntax with regard to numbers, arithmetic, strings, booleans, and various operators.</strong></p>
+
+<p>Strings can be denoted with single or double quotation marks (<code>”string”</code> or <code>’string’</code>) in both languages. In both languages, strings can also be concatenated literally (with + signs). E.g. <code>"hel" + "lo"</code></p>
+<p>In JavaScript, a triple equals sign (<code>===</code>) determines if two objects are the exact same object (same type and value). However in Ruby, a double equals sign (<code>==</code>) determines if two objects are the same object. A double equals sign in JavaScript determines if the values match so <code>"1" == 1</code> would return <code>true</code>.</p>
+<p>Incrementing and Decrementing is slightly different in JavaScript too. Where in Ruby it's <code>x += 1</code>, it's <code>x++</code> in JavaScript.</p>
+<p>In both languages basic arithmetic is the same. <code>+</code> denotes addition, <code>-</code> denotes subtraction, <code>*</code> denotes multiplication, <code>/</code> denotes division, and <code>%</code> will give the remainder of the operation. e.g. <code> 1 + 2 = 3 </code> or <code> (3 + 4) * 5 = 35</code>.</p>
+<p>Boolean values in both languages are the same as well. They're <code>true</code> and <code>false</code> written out like that.</p>
+<p>Logical operators are the same as well. <code>&&</code> refers to logical <em>and</em>. <code>||</code> refers to the logical <em>or</em>. Logical operators can be combined with comparison operators (>, <, >=, <=, ==, !=) in both languages. The ternary operator can be used similarly in JavaScript to the way it is used in Ruby. e.g. <code> console.log(true ? "true" : "false");</code> (the only thing that is different is the use of <code>console.log</code> to print to the console.)</p>
+
+<br>
+
+<h3>Ch. 2: Program Structure</h3>
+
+<p><strong>What is an expression?</strong></p>
+
+<p>Any fragment of code that produces a value is an expression.</p>
+
+<p><strong>What is the purpose of semicolons in JavaScript? Are they always required?</strong></p>
+
+<p>They signify the end of a statement. That way the next line will be treated as a different statement. It is not always required, although the rules for omitting a semicolon are completx and it's probably good practice to end each statement with a semi-colon.</p>
+
+<p><strong>What causes a variable to return undefined?</strong></p>
+
+<p>Asking for the value of an empty variable returns undefined.</p>
+
+<p><strong>Write your own variable and do something to it in the eloquent.js file.</strong></p>
+
+<p><a href="https://github.com/themcny/phase-0/blob/master/week-7/eloquent.js">See eloquent.js file.</a></p>
+
+<p><strong>What does console.log do and when would you use it? What Ruby method(s) is this similar to?</strong></p>
+
+<p><code>console.log</code> outputs values. It's similar to <code>p</code>, <code>puts</code>, and <code>print</code>.</p>
+
+<p><strong>Write a short program that asks for a user to input their favorite food. After they hit return, have the program respond with "Hey! That's my favorite too!" (You will probably need to run this in the Chrome console rather than node since node does not support prompt or alert). Paste your program into the eloquent.js file.</strong></p>
+
+<p><a href="https://github.com/themcny/phase-0/blob/master/week-7/eloquent.js">See eloquent.js file.</a></p>
+
+
+<p><strong>Describe while and for loops</strong></p>
+
+<p>In a while loop, while some condition is true, the program will execute a statement. It will repeatedly execute that statement as long as the conditional expression is true. An example of a conditional expression is <code>number < 5</code>. Generally, to create a working while loop that isn't an infinite loop, some kind of counter variable will need to be created and then incrementally increase or decrease within the while loop.</p>
+<p>A for loop in JavaScript includes the counter variable, the increment that the program will count by (e.g. every 2 --> 2, 4, 6, etc.), and the conditional statement all in the parentheses that initialize the for loop. Then after that first line, there's the actual statement(s) that you want to execute in the next line. The for loop takes up less lines than the while loop since it creates the counter variable, has the conditional statement, and the counting increment all in one line.</p>
+
+<p><strong>What other similarities or differences between Ruby and JavaScript did you notice in this section?</strong></p>
+
+<p>Many of the same loops that we saw (if/else, for, while) in Ruby also exist in JavaScript. While the syntax might be slightly different (there are less parentheses and semicolons and you don't have to declare var in front of a new variable) in Ruby. Comments are denoted by <code>//</code> rather than <code>#</code>.</p>
+
+<p><strong>Complete at least one of the exercises (Looping a Triangle, FizzBuzz, of Chess Board) in the eloquent.js file.</strong></p>
+
+<p><a href="https://github.com/themcny/phase-0/blob/master/week-7/eloquent.js">See eloquent.js file.</a></p>
+
+<br>
+
+<h3>Ch. 3: Functions</h3>
+
+<p><strong>What are the differences between local and global variables in JavaScript?</strong></p>
+
+<p>Variables declared outside of any function are <em>global variables</em> and are visible throughout the entire program. <em>Local variables</em> are created within a function and are local to that function.</p>
+
+<p><strong>When should you use functions?</strong></p>
+
+<p>A function is a block of code that is programmed to perform some kind of task. You should use functions when you want to re-use a block of code repeatedly to manipulate an object (or collection of objects).</p>
+
+<p><strong>What is a function declaration?</strong></p>
+
+<p>It is a statement that defines a variable and then points that variable at a given function. For example:<blockquote><code> <p>function double(x) {</p>
+	<p>&nbsp;&nbsp;return x * 2</p>
+}</code></blockquote></p>
+
+<p><strong>Complete the minimum exercise in the eloquent.js file.</strong></p>
+
+<p><a href="https://github.com/themcny/phase-0/blob/master/week-7/eloquent.js">See eloquent.js file.</a></p>
+
+
+<br>
+
+<h3>Ch. 4: Data Structures: Objects and Arrays</h3>
+Skip the sections on the Lycanthrope's log, Computing Correlations, and sections from Further Arrayology to the Global Object, but read the chapter summary.
+
+<p><strong>What is the difference between using a dot and a bracket to look up a property? Ex.array.max vs array["max"]</strong></p>
+
+<p>Both the dot and the square brackets access a property of <code>array</code>. A dot is must be used after a valid variable name and it names the property directly. However, for the square brackets, the expression within the square brackets is evaluated to get the property name. So <code>array["max"]</code> will evaluate <code>"max"</code> and use that result as the property name. </p>
+
+<p><strong>Create an object called me that stores your name, age, three favorite foods, and a quirk in your eloquent.js file.</strong></p>
+
+<p><a href="https://github.com/themcny/phase-0/blob/master/week-7/eloquent.js">See eloquent.js file.</a></p>
+
+<p><strong>What is a JavaScript object with a name and value property similar to in Ruby?</strong></p>
+
+<p>It is similar to a hash. There's a 'key' and a 'value' assigned to that key. </p>
+
+<br>
+<hr>
+<h2>Release 2: Reflect</h2>
+
+<p><strong>What are the biggest similarities and differences between JavaScript and Ruby?</strong></p>
+
+<p>JavaScript is much more finicky when it comes to how it interprets where statements begin and end. It is important to remember the semicolon for most statements so that JavaScript will evaluate one statement at a time instead of trying to lump it into a big statement. Where Ruby is able to interpret without extra help, it seems that JavaScript needs more help. For example, to declare a variable in JavaScript the programmer needs to preceed the variable name with <code>var</code>. In Ruby one just needs to type the variable name and it's original value. Both languages have built in methods like <code>.push</code>, <code>.max</code>, <code>.min</code>. Both languages have similar loops and allow variables (which can be integers, strings, arrays, or even functions) to be manipulated similarly. Basic arithmetic is the same. </p>
+
+<p><strong>Was some of your Ruby knowledge solidified by learning another language? If so, which concepts?</strong></p>
+
+<p>It was nice to see that logic and loops could be used in much the same way. I don't know that it solidified my Ruby knowledge. But it helped with solidifying my programming logic. It also proved that being able to break down any program into simple small steps, makes it easy to program in any language.</p>
+
+<p><strong>How do you feel about diving into JavaScript after reading these chapters?</strong></p>
+
+<p>I feel pretty good. At least now I have a basic grasp of the syntax I'll be using.</p>
