@@ -198,3 +198,5 @@ document.onkeydown = function(e) {
 			break;
     }
 };
+
+//http://piq.codeus.net/draw
