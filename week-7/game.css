@@ -1,0 +1,26 @@
+body{
+	/*border: 1px solid green;*/
+	width: 95vw;
+	height: 95vh;
+}
+.level {
+	width: 90%;
+	height: 50%;
+	border: 1px solid black;
+	background-image: url("background.jpg");
+	background-size: 900px 300px;
+	background-repeat: no-repeat;
+}
+.hero {
+	position:absolute; top: 280px;
+	width: 70px;
+	height:80px;
+	background-image: url("game-imgs/stick-fig-sheet.jpg");
+}
+.punch {
+	animation: punch steps(3) 0.15s infinite;
+}
+@keyframes punch {
+	from { background-position: 70px 0px; }
+	to { background-position: 140px 0px; }
+}
