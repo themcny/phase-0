@@ -11,16 +11,23 @@ body{
 	background-size: 900px 300px;
 	background-repeat: no-repeat;
 }
-.hero {
+#hero {
 	position:absolute; top: 280px;
 	width: 70px;
 	height:80px;
 	background-image: url("game-imgs/stick-fig-sheet.jpg");
 }
 .punch {
-	animation: punch steps(3) 0.15s infinite;
+	animation: punch steps(4) 1s infinite;
 }
 @keyframes punch {
-	from { background-position: 70px 0px; }
-	to { background-position: 140px 0px; }
+	from { background-position: 0px 0px; }
+	to { background-position: 210px 0px; }
+}
+.kick {
+	animation: kick steps(4) 1s infinite;
+}
+@keyframes kick {
+	from { background-position: 0px 0px; }
+	to { background-position: 0px 240px; }
 }
