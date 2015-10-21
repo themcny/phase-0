@@ -137,7 +137,7 @@ function weapon(person, enemy){
 		// Alert that there is no weapon equipped
 		console.log("You have no weapon equipped.")
 	}
-};
+};*/
 
 // Functions for adding and removing a class - for CSS animations
 
@@ -158,7 +158,7 @@ function addAclass(idString, classString) {
 	thing.className = thing.className + myClassName;
 }
 
-document.on('keydown', function(e) {
+/*document.on('keydown', function(e) {
 	if (e.keyCode === 18) {
 		addAclass('.hero', 'punch');
 		setTimeout(function() { removeAclass('.hero', 'punch'); }, 150);
@@ -182,11 +182,15 @@ document.onkeydown = function(e) {
            break;
         case 17:
         	//alert('ctrl');
-        	kick(hero, punchingBag)
+        	addAclass('hero', 'kick');
+        	setTimeout(function() { removeAclass('hero', 'kick'); }, 1500)
+        	kick(hero, punchingBag);
         	break;
     	case 18:
     		//alert('alt');
-    		punch(hero, punchingBag)
+    		addAclass('hero', 'punch');
+			setTimeout(function() { removeAclass('hero', 'punch'); }, 1500);
+    		punch(hero, punchingBag);
     		break;
 		case 90:
 			//alert('z');
