@@ -3,40 +3,36 @@
 // Function 'vector' to group coordinates -- figure out movement
 /*function Vector(x, y) {
 	this.x = x; this.y = y;
-}
+}*/
 
 // 1st establish objects - hero(s), weapon(s), enemy(s)?
-// The Hero
+// The Hero - so hero, punchingBag and sword don't work if it is called for the animation function
 var hero = {
 	health: 100,
 	damage: {
 		hand: 5,
 		foot: 10
 	},
-	pos: Vector (0, 0),
-	speed: 
 	weapon: false
 };
 
 // The Enemy - A Punching Bag
 var punchingBag = {
 	health: 1000,
-	pos: Vector (0, 0)
 };
 
 // The Weapon - A Sword
 var sword = {
 	damage: {
 		hand: 15,
-		special: 30,
+		special: 30
 	},
-	pos: Vector (5, 0),
 	weapon: true
 };
 
 // The Level
 var level = document.getElementById("level");
-
+/*
 // positioning traits
 var x = 0,
 y = 0,
@@ -96,7 +92,7 @@ function walk(){
 
 }
 
-update();
+walk();
 
 document.body.addEventListener("keydown", function (e) {
 	keys[e.keyCode] = true;
@@ -104,6 +100,7 @@ document.body.addEventListener("keydown", function (e) {
 document.body.addEventListener("keyup", function (e) {
 	keys[e.keyCode] = false;
 });
+*/
 
 // Function to equip a sword and increase damage
 function equip(item, person){
@@ -137,7 +134,7 @@ function weapon(person, enemy){
 		// Alert that there is no weapon equipped
 		console.log("You have no weapon equipped.")
 	}
-};*/
+};
 
 // Functions for adding and removing a class - for CSS animations
 
@@ -165,6 +162,16 @@ function addAclass(idString, classString) {
 	}
 });*/
 
+// Health Bar JavaScript and Damage
+
+function damage(health,htmlid,damage) {
+	health = document.getElementById(htmlid);
+	health.value = health.value - damage;
+};
+
+//var healthHero = document.getElementById("healthHero")
+
+
 // recognizing the arrow key presses - this part works
 document.onkeydown = function(e) {
     switch (e.keyCode) {
@@ -181,17 +188,17 @@ document.onkeydown = function(e) {
             alert('down');
            break;
         case 17:
-        	//alert('ctrl');
         	addAclass('hero', 'kick');
-        	setTimeout(function() { removeAclass('hero', 'kick'); }, 500)
+        	setInterval(function() { removeAclass('hero', 'kick'); }, 100)
         	kick(hero, punchingBag);
-        	break;
+        	damage(punchingBag.health, 'healthEnemy', hero.damage.foot);
+        	//break;
     	case 18:
-    		//alert('alt');
     		addAclass('hero', 'punch');
-			setTimeout(function() { removeAclass('hero', 'punch'); }, 500);
+			setInterval(function() { removeAclass('hero', 'punch'); }, 100);
     		punch(hero, punchingBag);
-    		break;
+    		damage(punchingBag.health, 'healthEnemy', hero.damage.hand);
+    		//break;
 		case 90:
 			//alert('z');
 			weapon(hero, punchingBag)
