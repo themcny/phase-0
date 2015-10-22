@@ -183,13 +183,13 @@ document.onkeydown = function(e) {
         case 17:
         	//alert('ctrl');
         	addAclass('hero', 'kick');
-        	setTimeout(function() { removeAclass('hero', 'kick'); }, 1500)
+        	setTimeout(function() { removeAclass('hero', 'kick'); }, 500)
         	kick(hero, punchingBag);
         	break;
     	case 18:
     		//alert('alt');
     		addAclass('hero', 'punch');
-			setTimeout(function() { removeAclass('hero', 'punch'); }, 1500);
+			setTimeout(function() { removeAclass('hero', 'punch'); }, 500);
     		punch(hero, punchingBag);
     		break;
 		case 90:
@@ -198,3 +198,5 @@ document.onkeydown = function(e) {
 			break;
     }
 };
+
+//http://piq.codeus.net/draw

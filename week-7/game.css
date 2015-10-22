@@ -12,22 +12,23 @@ body{
 	background-repeat: no-repeat;
 }
 #hero {
-	position:absolute; top: 280px;
-	width: 70px;
-	height:80px;
-	background-image: url("game-imgs/stick-fig-sheet.jpg");
+	position:absolute; top:309px;
+	width: 20px;
+	height: 20px;
+	background-image: url("game-imgs/Boomer.png");
+	background-position: 120px 539px;
 }
 .punch {
-	animation: punch steps(4) 1s infinite;
+	animation: punch steps(3) 0.55s infinite;
 }
 @keyframes punch {
-	from { background-position: 0px 0px; }
-	to { background-position: 210px 0px; }
+	from { background-position: 119px 362px; }
+	to { background-position: 94px 362px; }
 }
 .kick {
-	animation: kick steps(4) 1s infinite;
+	animation: kick steps(3) 0.55s infinite;
 }
 @keyframes kick {
-	from { background-position: 0px 0px; }
-	to { background-position: 0px 240px; }
+	from { background-position: 69px 362px; }
+	to { background-position: 47px 362px; }
 }
