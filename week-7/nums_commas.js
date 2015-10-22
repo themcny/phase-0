@@ -88,3 +88,8 @@ assert(
 
 
 // Reflection
+
+// Feedback
+/*It was great working you again. I thought we had good communication. You were great at 
+suggesting ideas for refactoring and I'm glad you wanted to do the bonus and make the tests. 
+I'd gladly pair with you again.*/
