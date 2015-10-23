@@ -3,6 +3,11 @@ body{
 	width: 95vw;
 	height: 95vh;
 }
+/*
+canvas {
+	border:1px solid black;
+}
+*/
 .level {
 	width: 90%;
 	height: 50%;
@@ -11,26 +16,50 @@ body{
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
+#punchingBag {
+	position:absolute; top: 240px; left:65px;
+	width: 70px;
+	height: 80px;
+	background-image: url("game-imgs/punching-bag.jpg");
+}
+.swing {
+	animation: swing 3s infinite ease-in-out;
+}
+@keyframes swing {
+	0%{transform:rotate(-3deg)}
+    50%{transform:rotate(3deg)}
+    100%{transform:rotate(-3deg)}
+}
 #hero {
-	position:absolute; top:300px;
-	width: 20px;
-	height: 20px;
-	background-image: url("game-imgs/Boomer.png");
-	background-position: 120px 539px;
+	position:absolute; top:240px;
+	width: 70px;
+	height: 80px;
+	background-image: url("game-imgs/stick-fig.jpg");
+	background-position: 74px 2px;
+}
+.walkright {
+	animation: walkright steps(3) 0.55s infinite;
+}
+@keyframes walkright {
+	0%{ background-image: url("game-imgs/stick-walk-01.jpg"); }
+	50%{ background-image: url("game-imgs/stick-walk-02.jpg"); }
+	100%{ background-image: url("game-imgs/stick-walk-03.jpg"); }
 }
 .punch {
 	animation: punch steps(3) 0.55s infinite;
 }
 @keyframes punch {
-	from { background-position: 119px 362px; }
-	to { background-position: 94px 362px; }
+	0%{ background-image: url("game-imgs/stick-punch-01.jpg"); }
+	50%{ background-image: url("game-imgs/stick-punch-02.jpg"); }
+	100%{ background-image: url("game-imgs/stick-punch-03.jpg"); }
 }
 .kick {
 	animation: kick steps(3) 0.55s infinite;
 }
 @keyframes kick {
-	from { background-position: 69px 362px; }
-	to { background-position: 47px 362px; }
+	0%{ background-image: url("game-imgs/stick-kick-01.jpg"); }
+	50%{ background-image: url("game-imgs/stick-kick-02.jpg"); }
+	100%{ background-image: url("game-imgs/stick-kick-03.jpg"); }
 }
 p {
 	font-size: 10px;
