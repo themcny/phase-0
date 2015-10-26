@@ -28,6 +28,25 @@ var sword = {
 // The Level
 var level = document.getElementById("level");
 
+//Getting position - need to make it fexible so that it can take multiple elements in? and return their positions to new variables?
+var xPos = 0;
+var yPos = 0;
+function getPosition(idString) {
+	var element = document.getElementById(idString)    
+    while(element) {
+        xPos += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPos += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+}
+
+getPosition('hero');
+hero.xPos = xPos;
+hero.yPos = yPos;
+
+getPosition('punchingBag');
+punchingBag.xPos = xPos;
+punchingBag.yPos = yPos;
 
 // Function to equip a sword and increase damage
 function equip(item, person){
@@ -88,6 +107,9 @@ function damage(health,htmlid,damage) {
 	health = document.getElementById(htmlid);
 	health.value = health.value - damage;
 };
+
+
+
 
 // recognizing the arrow key presses - this part works
 document.onkeydown = function(e) {
