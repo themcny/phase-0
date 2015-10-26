@@ -1,19 +1,76 @@
-// Fight Scheme like Street Fighter?
+//Pseudocode
+/*
+Create objects, Hero, Weapon, Enemy
+
+Equip Function -
+Input: Weapon object, hero object
+Output: Hero's weapon property changed
+Steps: IF the hero and the item are at the same place, return weapon property TRUE.
+
+Punch/Kick Function -
+Input: hero object and enemy object
+Output: Damage done to the enemy
+Steps: subtract 'some' enemy health where 'some' is equal to the damage property of the hero
+
+Weapon Function -
+Input: Hero object and Weapon object
+Output: changed damage of hero
+Steps: IF hero has a weapon THEN
+hero damage should be set equal to the weapon's damage
+
+Remove a Class/ Add a Class Function(s) -
+Input: ID string for HTML div, HTML class name string
+Output: Either no class, or a new class
+Steps: Access the HTML div and set the class name to either nothing or to a new class name
+
+Arrow Keys -
+Input: User keyboard presses
+Output: An animation
+Steps:
+IF ctrl key is pressed THEN
+kick punching bag
+damage the punching bag
+change the class so that the animation kicks too
+ELSE IF alt key is pressed THEN
+punch the punching bag
+damage the punching bag
+change the class so that the animation punches too
+ELSE IF z is pressed THEN
+weapon hit on the punching bag
+damage the punching bag
+change the class so that the animation hits the bag
+ELSE IF left arrow key is pressed THEN
+walk left animiation
+ELSE IF right arrow key is pressed THEN
+walk right animation
+ENDIF
+
+*/
+
+//Stick Fighter - Prototype
 
 // 1st establish objects - hero(s), weapon(s), enemy(s)?
-// The Hero - so hero, punchingBag and sword don't work if it is called for the animation function
+// The Hero - A Stick Figure
 var hero = {
 	health: 100,
 	damage: {
 		hand: 5,
 		foot: 10
 	},
-	weapon: false
+	weapon: false,
+	pos: {
+		x: 0,
+		y: 0
+	}
 }
 
 // The Enemy - A Punching Bag
 var punchingBag = {
-	health: 1000
+	health: 1000,
+	pos: {
+		x: 0,
+		y: 0
+	}
 }
 
 // The Weapon - A Sword
@@ -22,51 +79,32 @@ var sword = {
 		hand: 15,
 		special: 30
 	},
-	weapon: true
+	weapon: true,
+	pos: {
+		x: 0,
+		y: 0
+	}
 }
 
-// The Level
-var level = document.getElementById("level");
-
-//Getting position - need to make it fexible so that it can take multiple elements in? and return their positions to new variables?
-var xPos = 0;
-var yPos = 0;
-function getPosition(idString) {
-	var element = document.getElementById(idString)    
-    while(element) {
-        xPos += (element.offsetLeft - element.scrollLeft + element.clientLeft);
-        yPos += (element.offsetTop - element.scrollTop + element.clientTop);
-        element = element.offsetParent;
-    }
-}
-
-getPosition('hero');
-hero.xPos = xPos;
-hero.yPos = yPos;
-
-getPosition('punchingBag');
-punchingBag.xPos = xPos;
-punchingBag.yPos = yPos;
 
 // Function to equip a sword and increase damage
 function equip(item, person){
 	if (item.pos == person.pos)
 		person.damage.hand = item.damage.hand;
 		person.weapon = item.weapon;
-};
-
+}
 
 // Function to punch an enemy if the enemy is in the same place
 function punch(person, enemy){
 	if (enemy.pos === hero.pos)
 		enemy.health -= person.damage.hand;
-};
+}
 
 // Function to kick an enemy
 function kick(person, enemy){
 	if (enemy.pos === person.pos)
 		enemy.health -= person.damage.foot;
-};
+}
 
 // Function to use a weapon's special traits
 function weapon(person, enemy){
@@ -80,7 +118,7 @@ function weapon(person, enemy){
 		// Alert that there is no weapon equipped
 		console.log("You have no weapon equipped.")
 	}
-};
+}
 
 // Functions for adding and removing a class - for CSS animations
 function removeAclass(idString, classString) {
@@ -100,7 +138,6 @@ function addAclass(idString, classString) {
 	thing.className = thing.className + myClassName;
 }
 
-// Swing Function for Punching Bag
 
 // Health Bar JavaScript and Damage
 function damage(health,htmlid,damage) {
@@ -109,23 +146,25 @@ function damage(health,htmlid,damage) {
 };
 
 
-
-
-// recognizing the arrow key presses - this part works
+// recognizing the arrow key presses
 document.onkeydown = function(e) {
     switch (e.keyCode) {
         case 37:
             //alert('left');
-            move('hero', 'left');
+           	//hero = document.getElementById('hero');
+            //hero.style.left = (hero.style.left.replace('px','')*1)-5;
+            addAclass('hero', 'walkleft');
+            setInterval(function() { removeAclass('hero', 'walkleft'); }, 1500);
             break;
         case 38:
             //alert('up');
             break;
         case 39:
             //alert('right');
+          	//hero = document.getElementById('hero');
+            //hero.style.left = (hero.style.left.replace('px','')*1)+5;
             addAclass('hero', 'walkright');
             setInterval(function() { removeAclass('hero', 'walkright'); }, 1500);
-            move('hero', 'right');
             break;
         case 40:
         	//alert('down');
@@ -148,134 +187,46 @@ document.onkeydown = function(e) {
     		break;
 		case 90:
 			//alert('z');
-			weapon(hero, punchingBag)
+			addAclass('hero', 'sword');
+			setInterval(function() { removeAclass('hero', 'sword'); }, 1500);
+			weapon(hero, punchingBag);
+			damage(punchingBag.health, 'healthEnemy', hero.damage.hand);
+			addAclass('punchingBag','swing');
+        	setInterval(function() { removeAclass('punchingBag', 'swing'); }, 1500);
 			break;
     }
 };
 
-//http://piq.codeus.net/draw
-
-// Moving Left and Right
 /*
-var itemObject = null;
+Reflection
 
-function position(idString){
-	itemObject = document.getElementById(idString);
-	itemObject.style.position = 'relative';
-	itemObject.style.left = '0px';
-};
+What was the most difficult part of this challenge?
 
-function move(item, direction){
-	if (direction === "left"){
-		itemObject.style.left = parseInt(itemObject.style.left) + 5 + "px";
-	}
-	else if (direction === "right") {
-		itemObject.style.left = parseInt(itemObject.style.left) - 5 + "px";
-	}
-};
+Keeping it small. I also wanted to get the animation to move across the screen but without
+JQuery, it got to be too hard. I think staying focused on the functions that I did make
+was important. Also drawing the images was difficult for me as I'm not artistic in that way.
 
-//window.onload = position('hero');
 
-// Jumping 
+What did you learn about creating objects and functions that interact with one another?
 
-var hopping = false;
+I learned that it is important to keep all my names straight and be careful that I spell
+it properly. Additionally, I got better at creating multiple functions that interact with
+each other.
 
-function hop() {
-	if (hopping === false) {
-		hopping = true;
-		setTimeout(land, 500);
-	}
-}
 
-function land() {
-	hopping = false;
-}
-*/
+Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
 
-/*document.on('keydown', function(e) {
-	if (e.keyCode === 18) {
-		addAclass('.hero', 'punch');
-		setTimeout(function() { removeAclass('.hero', 'punch'); }, 150);
-	}
-});*/
+Not for this one. I did learn that I would like to be able to use JQuery. It would have
+saved me a lot of headached when adding and removing classes.
 
-// Function 'vector' to group coordinates -- figure out movement
-/*function Vector(x, y) {
-	this.x = x; this.y = y;
-}*/
 
-/*
-// positioning traits
-var x = 0,
-y = 0,
-vix = 0, //initial speed/movement
-viy = 0, //initial speed/movement
-speed = 2, 
-friction = 0.98,
-keys =[];
+How can you access and manipulate properties of objects?
 
-// Now establishing all the other functions - punch, kick, equip, move
+Using the dot syntax or the square brackets syntax. E.g. either object.property or 
+object["property"] would acces the properties of the objects. Then they can be manipulated
+like variables (basic arithmetic).
 
-// Function to Walk
-var canvas = document.getElementById("canvas"),
-	ctx = canvas.getContext("2d");
 
-canvas.width = 300;
-canvas.height = 900;
 
-function walk(){
-	if (keys[37]) { // moving left
-		if (vix > -speed) {
-			vix--;
-		}
-	}
-	if (keys[38]) { // moving up
-		if (viy > -speed) {
-			viy--;
-		}
-	}
-	if (keys[39]) { // moving right
-		if (vix < speed) {
-			vix++;
-		}
-	}
-	if (keys[40]) { // moving down
-		if (viy < speed) {
-			viy--;
-		}
-	}
 
-	//now add some friction to movement
-	viy *= friction;
-	y += viy;
-	vix *= friction;
-	x += vix;
-
-	// now add behavior when player reaches the edge of the background
-
-	if (x >= 830) {
-		x = 830; //what happens at right most edge
-	} else if (x <= 70) {
-		x = 70; //what happens at the left most edge
-	}
-
-	if (y > 220) {
-		y = 220; //what happens at top edge
-	} else if (y <= 80) {
-		y = 80; //what happens at bottom edge
-	}
-
-	// set a timeout
-	setTimeout(walk, 15);
-
-}
-
-walk();
-
-document.body.addEventListener("keydown", function (e) {
-	keys[e.keyCode] = true;
-});
-document.body.addEventListener("keyup", function (e) {
-	keys[e.keyCode] = false;
-});
 */
