@@ -174,3 +174,27 @@ my_car.odometer
 my_car.last_action
 
 # 5. Reflection
+=begin
+
+What concepts did you review or learn in this challenge?
+
+I reviewed how to make a class and the use of global, instance, and local variables.
+I learned how to use a global variable so that I can access that variable across
+multiple classes.
+
+
+What is still confusing to you about Ruby?
+
+There's nothing that I found particularly confusing. It was weird to come back to ruby
+after a week in JavaScript. I'm still in the habit of adding semi-colons after every line
+and var infront of every variable. Also getting back to so many built in methods was nice.
+
+
+What are you going to study to get more prepared for Phase 1?
+
+I think I'm going to study inheritance and scope. I'm still not always sure what the best
+type of variable is for certain situations. 
+
+
+
+=end
