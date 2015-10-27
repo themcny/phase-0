@@ -2,10 +2,10 @@
 
 ###Release 5
 
-1. `SELECT * FROM state;`
-2. `SELECT * FROM regions;`
-3. ```SELECT state_name, population
-FROM states;```
+1. >`SELECT * FROM state;`
+2. >`SELECT * FROM regions;`
+3. >`SELECT state_name, population`
+>`FROM states;`
 4. ```SELECT state_name, population
 FROM states
 ORDER BY population DESC;```
