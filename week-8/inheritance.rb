@@ -13,12 +13,12 @@
 class GlobalCohort
 	def initialize()
 		@name = name
-		@students = []
+		@students = [] #array of all students names
 		@p0_start_date = #date as an array
 		immersive_start_date
 		graduation_date
-		email_list
-		num_of_students
+		@email_list = #hash? names and email addresses
+		@num_of_students = students.length
 	end
 
 	def add_student(student_name)
@@ -44,6 +44,8 @@ end
 class LocalCohort < GlobalCohort
 	def initialize(location)
 		@location = location
+		@students = #[array of local students]
+		@email_list = #just local email addresses
 	end
 
 end
