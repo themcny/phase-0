@@ -4,7 +4,7 @@ Time boxing is a method of trying to help productivity that involves setting a p
 
 Currently I manage my time with a set schedule where I set aside chunks of time each day to try and do productive work. It isn't currently working because generally, I set aside too much time (leading me to lose motivation and procrastinate because I think I have more time). Additionally, I have found that I schedule productive work times when it is harder for me to get into a 'Flow' (like in the middle of the day). 
 
-I was particularly interested in the use of meditation, both the focusing meditation that can help lessen anxiety and stress as well as the meditation employed as part of the 'Mindful Productivity Ninja' mindset. Though I have never tried meditating, I think that it would help me better focus my energy and silence the risk averse part of my brain. 
+I was particularly interested in the use of meditation, both the focusing meditation that can help lessen anxiety and stress as well as the meditation employed as part of the 'Mindful Productivity Ninja' mindset. Though I have never tried meditating, I think that it would help me better focus my energy and silence the risk averse part of my brain. Hopefully, it will be beneficial.
 
 Many of the time management and productivity ideas referenced starting small (e.g. Growth Mindset, Counter-intuitive Productivity). In the past, I have been discouraged and found it hard to reach my goals because a task or a goal I set for myself was too large. Breaking it down into smaller, more manageable goals/tasks would definitely help me to be more productive.
 
