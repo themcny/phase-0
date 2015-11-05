@@ -5,11 +5,11 @@
 
 # Pseudocode
 
+#add student to array
+#remove student from array
+#currently in phase - compare dates - if statement
+#graduated? - compare dates - if statement
 
-#add student
-#remove student
-#currently in phase
-#graduated?
 
 # Initial Solution
 =begin
@@ -85,8 +85,6 @@ class LocalCohort < GlobalCohort
   end
   
 end
-  
-
 
 class Student
   attr_accessor :first
@@ -101,21 +99,6 @@ class Student
   end  
 end
 
-one = Student.new('1', '1', 'email1', 'sf')
-two = Student.new('2','2', 'email2', 'chi')
-three = Student.new('3','3','email3', 'sf')
-
-a = [one, two, three]
-b = [1,2]
-c = GlobalCohort.new
-c.add_student(one)
-c.add_student(two)
-c.add_student(three)
-c.printz(a)
-sf = LocalCohort.new('sf')
-d = sf.locals
-p d
-sf.printz(b)
 =end
 
 
@@ -188,8 +171,6 @@ class LocalCohort < GlobalCohort
   end
   
 end
-  
-
 
 class Student
   attr_accessor :first, :last, :email, :city
@@ -212,7 +193,6 @@ a = [one, two, three]
 b = [1,2]
 #c = GlobalCohort.new(a)
 
-
 sf = LocalCohort.new('sf',a, 'c')
 #d = sf.locals
 sf.locals
@@ -221,20 +201,25 @@ sf.locals
 
 
 # Reflection
+=begin
+What concepts did you review in this challenge?
 
-#What concepts did you review in this challenge?
-
-#Inheritance.
-
-
-#What is still confusing to you about Ruby?
-
+Inheritance. Also scopes of variables. We had to figure out whether to to use local
+variables, instance variables, or global variables. Additionally, it was good practice
+in calling new classes and class methods.
 
 
+What is still confusing to you about Ruby?
 
-#What are you going to study to get more prepared for Phase 1?
+I think I've got a fairly good grasp on Inheritance in Ruby now, but I'd like more practice
+to make sure I do understand it. There's nothing that is particularly confusing to me at
+the moment.
+
+
+What are you going to study to get more prepared for Phase 1?
+
+I'll try to get more practice with inheritance and using the super method. 
 
 
 
-
-
+=end
